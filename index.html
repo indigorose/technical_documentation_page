@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Technical Document Page</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="header">Introduction to HTML</header>
+    <!-- hotizontal nav bar -->
+    <nav id="navbar" class="nav-bar" >
+       <header class="table-contents">Introduction to HTML<br>Table of Contents</header>
+       <ul >
+           <li>
+               <a class="nav-link" href="#What_is_HTML">What is HTML</a>
+           </li>
+           <li>
+               <a class="nav-link" href="#Anatomy_of_an_HTML_Element">Anatomy of an HTML Element</a>
+           </li>
+           <li>
+               <a class="nav-link" href="#Attribute">Attribute</a>
+           </li>
+           <li>
+               <a class="nav-link" href="#Nesting_&_Empty_Elements">Nesting & Empty Elements</a>
+           </li>
+           <li>
+               <a class="nav-link" href="#Anatomy_of_an_HTML_Document">Anatomy of an HTML Document</a>
+           </li>
+           <li>
+               <a class="nav-link" href="#Images_&_Accessibility">Images & Accessibility</a>
+           </li>
+           <li>
+               <a class="nav-link" href="#Links">Links</a>
+           </li>
+           <li>
+               <a class="nav-link" href="#Text_Changes">Text Changes</a>
+           </li>
+           <li>
+               <a class="nav-link" href="#Reference">Reference</a>
+           </li>
+       </ul>
+   </nav>
+<!-- main section -->
+   <main id="main-doc" class="main">
+        <section
+            class="main-section"
+            id="What_is_HTML">
+            <header id="header">What is HTML</header>
+            <p>HTML (<strong>H</strong>yper<strong>t</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage) is the code that is used to structure our web pages and its contents. We can use paragraphs, bullet points, images and data tables within HTML to structure the page.</p>
+            <p>To help define the structure of our content, HTML operates using a series of elements which we then use to enclose or wrap our content so that it appears in certain ways. </p>
+            <code class="code-block">The quick brown fox jumps over the lazy dog</code>
+            <p>The above is a simple line of content, however by using elements, in this case "p",we can change the meaning within the HTML as a paragraph.</p>
+            <code class="code-block"> &lt;p&gt;The quick brown fox jumps over the lazy dog&lt;/p&gt;</code>
+       </section>
+        <section
+            class="main-section"
+            id="Anatomy_of_an_HTML_Element">
+            <header id="header">Anatomy of an HTML Element</header>
+            <p>Following code above, it shows a basic HTML element which can be broken down further following the below picture: </p>
+            <img id="img" src="HTML_code_pic1.png" alt="A breakdown of paragraph tag with pangram text, noting the opening, content, element and closing sections of the code.">
+            <p>The main parts of the element are as follows: </p>
+            <ol>
+                <li><strong>The opening tag:</strong> This consists of the name of the element (in this case p for paragraph), wrapped in the opening and closing <strong>angle brackets</strong>. This states where the element begins or starts to take effect - in this case where the paragraph begins.</li>
+                <li><strong>The closing tag:</strong> This is the same as the opening tag, except that it included a <i>forward slash</i> before the element name. This tells us when the paragraph ends. <strong>Note.</strong> Failure to include the proper closing tab can lead to errors and alternative results.</li>
+                <li><strong>The content:</strong> This is the content of the element, which in this example, is just text.</li>
+                <li><strong>The element:</strong> The element comprises of the opening tag, the closing tag and the content.</li>
+            </ol>
+            <p></p>
+        </section>
+        <section
+            class="main-section"
+            id="Attribute">
+            <header id="header">Attribute</header>
+            <p>Elements can also have attributes, let's look at example below: </p>
+            <img id="img"src="HTML_code_pic2.png" alt="the header tag, with the class attribute 'header-text' marked out">
+            <p>Attributes allow the element to contain extra information that won't appear in the content but can sometimes help with its appearance.</p><p>In the above example <code class="code-text">class</code> is the attribute name and <code class="code-text">header-text</code> is the attribute value. The <code class="code-text">class</code> attribute allows us to give the element a non-unique identifier that can be used to target it later work, most notably in css styling. </p>
+            <p>When using an attribute, it should always have the following:</p>
+                <ol>
+                    <li>A space between it and the element name (or the previous attribute if many are being used within the element).</li>
+                    <li> The attribute name followed by the equal sign.</li>
+                    <li> The attribute value is wrapped in quotation marks. </li>
+                </ol>
+            <p><strong>Note.</strong> It is highly recommended to use quotation marks for all attribute values even if it is simple, doesn't contain ASCII whitespace or certain characters as it helps the code be consistent and understandable to others.
+            </p>
+        </section>
+        <section
+            class="main-section"
+            id="Nesting_&_Empty_Elements">
+            <header id="header">Nesting & Empty Elements</header>
+            <h3>Nesting Elements</h3>
+        <p>We can also add elements to our element, we call this nesting. For example if we want to stress the word "jumps" in our content by making it bold, we can wrap this word using the <code class="code-text">&lt;strong&gt;</code> element, which means that the world will be emphasised:</p>
+        <code class="code-block">&lt;p&gt;The quick brown fox &lt;strong&gt;jumps&lt;strong&gt; over the lazy dog.&lt;/p&gt;</code><p>
+        <strong>Note.</strong> It is important to note the order of your elements to ensure successful nesting. In the above example, we can open with the <code class="code-text">&lt;p&gt;</code> element and then use the <code class="code-text">&lt;strong&gt;</code> element but when we close it must be in the reverse order.</p>
+        <p>Thus the code below is incorrect.</p>
+        <code class="code-block">&lt;p&gt; The quick brown fox &lt;strong&gt;jumps&lt;/p&gt; over the lazy dog.&lt;/strong&gt;</code>
+        <h3>Empty Elements</h3>
+        <p>We can also use empty elements whereby a closing tag is not required. Following the example below:</p>
+        <code class="code-block">&lt;img src="HTML_code_pic1.jpeg" alt="HTML code breakdown&gt;</code>
+        <p>We can note in this example that the above code does not contain a closing <code class="code-text">&lt;/img&gt;</code> tag despite using two attributes. This is because the image element doesn't require a wrap content to affect its place on the page.This tag will embed the image as it appears.</p>
+        </section>
+        <section
+            class="main-section"
+            id="Anatomy_of_an_HTML_Document">
+            <header id="header">Anatomy of an HTML Document</header>
+            <p>Following the basics of an HTML element, we can look at their effectiveness when combined. In the example below, we will look at some of the most common elements in an HTML document</p>
+        <pre class="code-block">
+
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Technical Document Page&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;header&gt;Introduction to HTML&lt;/header&gt;
+    &lt;/body&gt;
+    
+    &lt;/html&gt;          </pre>
+
+          
+           <p>Let's take a closer look at the different elements used above:
+               <ul>
+                   <li>
+                       <code class="code-text">&lt;!DOCTYPE html&lt;</code> - doctype. It is a required preamble. In the infancy of HTML, this element was used to ensure good HTML was used and minimise errors. Nowadays with the advent of more advanced error checking, it helps to make sure the document behaves correctly.
+                   </li>
+                   <li>
+                       <code class="code-text">&lt;html&gt; &lt;/html&gt;</code> - Known as a root element, this is usually found wrapping all the other elements in the document.
+                   </li>
+                   <li>
+                       <code class="code-text">&lt;head&gt; &lt;/head&gt;</code> - The head element is used to wrap elements that will tell us about the page but won't be displayed to the page viewers. Most commonly, this is where you will find the links to CSS style sheet, the page title and textual content direction.
+                   </li>
+                   <li>
+                       <code class="code-text"> &lt;meta charset="UTF-8"&gt;</code> - As mentioned in the head tag, the meta element allows us to set the characters for the document. In many cases using UTF-8 allows for the vast majority of characters written in any language. It helps to have this declared in your HTML document to avoid potential issues later on.
+                   </li>
+                   <li>
+                       <code class="code-text">&lt;title&gt;&lt;/title&gt;</code> - this element sets the title of your page. It appears in the browser tab when loaded. It also appears when you bookmark/favourite the page.
+                   </li>
+                   <li>
+                       <code class="code-text">&lt;body&gt; &lt;/body&gt;</code> - Lastly the <code class="code-text">&lt;body&gt;</code> element. This element will wrap the main content of your HTML to be viewed by the majority of users. Whether it is sound, video, images or text, all content will be here and viewed.
+                   </li>
+               </ul>
+           </p>
+        </section>
+      <section
+           class="main-section"
+           id="Images_&_Accessibility">
+           <header id="header">Images & Accessibility</header>
+           <p>
+               As mentioned in other sections, images can be embedded into our HTML and is usually in the empty element format below:</p>
+               <code class="code-block">&lt;img src="tamagotchi_1.png" alt="tamgotchi_1"&gt;</code>
+               <p>Using the <code class="code-text">src</code> attribute, the image will be embedded directly into our HTML document. Furthermore, we also include an <code class="code-text">alt</code> attribute with the text "tamagotchi_1". Known as the alternative attribute, it allows us to include a description of the image when it cannot be viewed for the following reasons:</p>
+               <ol>
+                   <li>
+                       It helps users who may be visually impaired and may use screen reading software that will pick up this information to assist the user.
+                   </li>
+                   <li>
+                       If an error occurs and the image is not displayed.
+                   </li>
+               </ol>
+               <p>It is important to note that with alternative text, the aim is to be descriptive for users. In the above case, "tamagotchi_1" may not be a suitable description for descriptive technologies. A more useful description such as "Original multicolored tamagotchi toy with chain." could be used.
+           </p>
+        </section>  
+      <section class="main-section"
+      id="Links">
+       <header id="header">Links</header>
+       <p>Links are key to a functioning web page, they are the web! By using a simple element <code class="code-text">&lt;a&gt;</code> (short for anchor) and the attribute <code class="code-text">href</code> (standing for <strong>h</strong>ypertext <strong>ref</strong>erence) with your website address you can create an effective link. </p> <p>The following is an example of a link in a HTML document:</p>
+ 
+       <code class="code-block">&lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;</code>
+       <p>This example, Google will be the only word displayed on our page, however by wrapping the word in the <code class="code-text">&lt;a&gt;</code> element and including the <code class="code-text">href</code> attribute and website, clicking and selecting the word google activates the action to change the web page to the referenced address.</p> 
+       <p><strong>Note.</strong> Do not forget to include the <code class="code-text">http://</code> or <code class="code-text">https://</code> (known as the <i>protocol</i>) to your website link. Failure to do so may lead to errors and alternative websites.
+       </p>
+    </section>
+      <section class="main-section"
+      id="Text_Changes">
+           <header id="header">Text Changes</header>
+           <p>In this last section, we are going to look at how we can change the text within our HTML document. In particular we will look at changing headings, paragraphs and lists.</p>
+           <h3>Headings</h3>
+           <p>There are heading elements within HTML that allows us to create different types of heading and subheadings.
+           The headings element has six variations, <code class="code-text">&lt;h1&gt;&mdash;&lt;h6&gt;</code>, in most cases not all variations are required.
+           </p>
+           <h3>Paragraphs</h3>
+           <p>Referring to our first review of elements, the paragraph element is our primary element to use when showing regular bodies of text in web pages.</p>
+           <h3>Lists</h3>
+           <p>HTML has two variations to show a list within a web page based on what you would like to show. However the two most common forms are as follows:
+               <ol>
+                   <li>
+                       <strong>Unordered lists</strong> are used when the order of the list doesn't matter and is usually stylised with bullet points. Use the <code class="code-text">&lt;ul&gt;</code> element to wrap this version.
+                   </li>
+                   <li>
+                       <strong>Ordered lists</strong> are used to when order does matter, using numbers instead of bullet points and use the <code class="code-text">&lt;ol&gt;</code>element to wrap the list.
+                   </li>
+               </ol>
+           Inside each element we use the additional <code class="code-text">&lt;li&gt;</code> element for each point.
+           </p>
+           <p>The following is an example shows HTML markup with headings, paragraphs and links:</p>
+               <pre class="code-block">
+    &lt;body&gt;
+        &lt;h1&gt;Introduction to HTML&lt;/h1&gt;
+           &lt;p&gt;This page is going to look at the following:&lt;p&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;headings&lt;/li&gt;
+                    &lt;li&gt;paragraphs&lt;/li&gt;    
+                    &lt;li&gt;links&lt;/li&gt;
+                &lt;/ul&gt;
+    &lt;/body&gt;               </pre>
+
+               </section>
+       <section class="main-section"
+                id="Reference">
+           <header id="header">Reference</header>
+           <p>Documentation is taken from the following reference <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">MDN Web Docs</a>.</p>
+        </section>  
+   </main>
+
+</body>
+</html>

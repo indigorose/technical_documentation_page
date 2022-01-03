@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300&family=Roboto:ital,wght@0,300;0,500;1,300&display=swap');
+
+.header{grid-area: header;}
+.nav-bar{grid-area: nav-bar;}
+.main{grid-area: main;}
+
+
+body{
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    border: 10px solid rgb(255, 255, 255);
+    display: grid;
+    grid-template-areas: 'header header header header header'
+    'nav-bar nav-bar main main main';
+    grid-gap: 10px;
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 50%;
+}
+
+@media screen and (max-width:2000px) {
+    body{
+        max-width: 70%;
+    }
+    
+}
+@media screen and (max-width:900px) {
+    body {
+        max-width: 70%;
+        display: block;
+    }
+
+}
+.header{
+    font-size: 2.5rem;
+    text-align: center;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 20px 0 10px 0;
+}
+#navbar{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    box-shadow: inset;
+}
+#navbar ul{
+    list-style-type: none;
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    
+}
+#navbar li a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    line-height: 2rem;
+    
+}
+
+.table-contents{
+    padding-top: 20px;
+    font-size: 1.25rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+#main-doc{
+    border: 1px solid rgb(255, 255, 255);
+    max-width: 800px;
+    display: block;
+
+}
+.main-section{
+    border: 1px solid rgb(255, 255, 255);
+    
+    max-width: 100%;
+    margin: 20px 0;
+}
+.main-section img{
+    height: 100%;
+    width: 100%;
+}
+.main-section ul{
+    line-height: 2rem;
+    text-align: justify;
+    padding-right: 10px;
+    
+}
+.main-section li{
+    line-height: 1.5rem;
+    padding-top: 5px;
+}
+#header{
+    font-size: 1.75rem;
+}
+p{
+    text-align: justify;
+    line-height: 1.5rem;
+}
+.code-block{
+    padding: 5px;
+    background-color: rgb(245,245,245);
+}
+code{
+    padding: 5px;
+    background-color: rgb(245,245,245);
+}
+strong{
+    font-weight: 500;
+}
+h3{
+    font-weight: 500;
+}
